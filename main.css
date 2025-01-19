@@ -4,25 +4,75 @@
   font-family: "Lato", sans-serif;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("./Images/background-image.jpg");
+  /* opacity: 0.5; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  height: 100%;
 }
 
-.top-nav {
+.left-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
 .right-nav {
   color: white;
   display: flex;
   justify-content: space-between;
 }
 
+.right-nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.right-nav ul li {
+  padding: 5vh;
+}
+
+.right-nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
 .logo {
   width: 15vh;
   height: 15vh;
+  padding: 1vh;
+}
+
+.opening-hours p {
+  font-family: "Caveat", serif;
+  font-weight: 400;
+  font-size: 5vh;
+  text-align: center;
+}
+
+.opening-hours ul {
+  font-size: 4vh;
+  list-style-type: none;
+}
+
+.opening-hours ul li {
+  font-family: "Caveat", serif;
+  padding: 2vh;
+}
+
+.opening-hours {
+  color: white;
+  position: absolute;
+  top: 25vh;
+  right: 20vh;
+  width: 50vh;
+}
+span li {
+  color: blue;
 }
