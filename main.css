@@ -3,3 +3,26 @@
   margin: 0;
   font-family: "Lato", sans-serif;
 }
+
+body {
+  background-image: url("./Images/background-image.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.right-nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 15vh;
+  height: 15vh;
+}
