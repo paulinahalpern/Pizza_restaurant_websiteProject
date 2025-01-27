@@ -1,21 +1,18 @@
 * {
-  border: 1px red solid;
+  /* border: 1px red solid; */
   margin: 0;
-  font-family: "Lato", sans-serif;
 }
 
 body,
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   background-image: url("./Images/background-image.jpg");
-  /* opacity: 0.5; */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100%;
 }
 
 .left-nav {
@@ -27,52 +24,376 @@ body {
   color: white;
   display: flex;
   justify-content: space-between;
+  margin-right: 60vh;
+}
+
+@media (max-width: 900px) {
+  .hamburger {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #d4af37;
+    left: 80%;
+  }
+
+  .right-nav {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 900px) {
+  .hamburger {
+    display: none;
+  }
+  .right-nav {
+    display: block;
+  }
 }
 
 .right-nav ul {
   display: flex;
   list-style-type: none;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
 .right-nav ul li {
-  padding: 5vh;
+  padding: 2vh;
 }
 
 .right-nav ul li a {
   color: white;
   text-decoration: none;
+  margin: 5px;
 }
 
 .logo {
-  width: 15vh;
-  height: 15vh;
-  padding: 1vh;
+  width: 10%;
+  height: 10%;
+}
+
+.email-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
 }
 
 .opening-hours p {
   font-family: "Caveat", serif;
-  font-weight: 400;
-  font-size: 5vh;
+  font-weight: 500;
+  font-size: 30px;
   text-align: center;
-}
-
-.opening-hours ul {
-  font-size: 4vh;
-  list-style-type: none;
 }
 
 .opening-hours ul li {
   font-family: "Caveat", serif;
-  padding: 2vh;
+  padding: 1vh;
+  list-style-type: none;
+  text-align: center;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  letter-spacing: 3px;
+}
+
+li span {
+  font-family: "Caveat", serif;
 }
 
 .opening-hours {
   color: white;
   position: absolute;
-  top: 25vh;
-  right: 20vh;
-  width: 50vh;
+  top: 20%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  min-height: 100vh;
+  max-height: 200vh;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  font-size: 25px;
+  line-height: 2em;
 }
-span li {
-  color: blue;
+
+@media (max-width: 900px) {
+  .opening-hours {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    padding-bottom: 20vh;
+    position: absolute;
+    top: 25%;
+    bottom: 20%;
+  }
+  .opening-hours ul li span {
+    margin-left: 20px;
+    font-size: 15px;
+  }
+}
+
+.nav-collection {
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-collection {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  display: flex;
+  gap: 30vh;
+  justify-content: center;
+  align-items: center;
+  font-family: "Caveat", serif;
+  white-space: nowrap;
+  min-height: 20vh;
+  max-height: 20vh;
+}
+
+@media (max-width: 900px) {
+  .nav-collection {
+    display: none;
+  }
+}
+
+.nav-item {
+  font-size: 70px;
+  font-family: "Caveat", serif;
+}
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-span-item:hover {
+  color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+.right-nav li a:hover {
+  color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+/* ORDER PAGE  need to add mobile version*/
+
+.order-page {
+  background-image: url("./Images/order_view.jpg");
+}
+
+.nav-bar-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.input-search {
+  width: 100vh;
+  height: 3vh;
+  border-radius: 15px;
+}
+
+.btn-add-to-cart .shop-cart-icon {
+  max-height: 3vh;
+}
+.btn-add-to-cart {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-right: 10vh;
+  width: 20vh;
+}
+
+.btn-user .user-icon {
+  max-height: 3vh;
+}
+
+.btn-user {
+  border-radius: 10px;
+  margin-right: 10vh;
+}
+
+.logo-order-view {
+  max-width: 18vh;
+}
+
+.search-product {
+  display: flex;
+  gap: 4vh;
+}
+
+.pizzeria-address {
+  background-image: url("./Images/background_address.avif");
+  max-width: 100%;
+  height: 25vh;
+}
+.pizzeria-address div {
+  font-size: 5vh;
+  font-family: "Caveat", serif;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 300;
+}
+
+.aside-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8vh;
+  margin-top: 10vh;
+}
+
+.aside-menu button {
+  border-radius: 10px;
+  font-family: "Caveat", serif;
+  width: 20vh;
+  height: 10vh;
+  font-size: 3vh;
+}
+
+.aside-menu button:hover {
+  background-color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+.main-content {
+  display: flex;
+  flex: 3 15 auto;
+  gap: 20vh;
+}
+.product-list {
+  color: white;
+  width: 100%;
+}
+.order-list {
+  color: white;
+  width: 50%;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5vh;
+  padding: 5vh;
+}
+
+.product-class-title {
+  width: 100%;
+  text-align: center;
+  font-family: "Caveat", serif;
+  font-size: 6vh;
+}
+
+.product-cart {
+  border: 1px solid #fffff0;
+  background: radial-gradient(
+      ellipse farthest-corner at right bottom,
+      #fedb37 0%,
+      #9f7928 30%,
+      #8a6e2f 48%
+    ),
+    radial-gradient(
+      ellipse farthest-corner at left top,
+      #ffffff 0%,
+      #ffffac 8%,
+      #d1b464 25%,
+      #5d4a1f 62.5%,
+      #5d4a1f 100%
+    );
+  color: black;
+  border-radius: 10px;
+  font-family: "Caveat", serif;
+  font-size: 3vh;
+  text-align: center;
+}
+
+.top-half {
+  padding: 1vh;
+  height: 11vh;
+}
+
+.bottom-half {
+  padding: 1vh;
+  height: 5vh;
+}
+
+/* EAT html */
+/* make scroll-based animations */
+
+h1 {
+  font-size: 8vh;
+  padding: 2vh;
+  color: white;
+  text-align: center;
+  font-family: "Caveat", serif;
+  letter-spacing: 2vh;
+}
+
+.main-title {
+  font-size: 4vh;
+  color: white;
+  text-align: left;
+  padding-left: 2vh;
+  font-family: "Caveat", serif;
+}
+
+.grid-layout-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 120vh;
+  gap: 5vh;
+  padding: 3vh;
+  color: white;
+  font-size: 3vh;
+  font-family: "Caveat", serif;
+}
+
+.product-menu {
+  border: 1px solid #fffff0;
+  border-radius: 20px;
+}
+
+/* DRINK MENU */
+
+.drink-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  color: white;
+  max-width: 120vh;
+  font-family: "Caveat", serif;
+  padding: 7vh;
+  gap: 5vh;
+  font-size: 3vh;
+}
+.drink-column {
+  border: 1px solid #fffff0;
+  border-radius: 20px;
+}
+
+.drink-column p {
+  padding: 5vh;
+  font-size: 5vh;
+}
+
+.drink-column ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.drink-column ul li {
+  padding: 2vh;
+  padding-left: 0;
 }
