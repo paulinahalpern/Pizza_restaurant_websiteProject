@@ -393,12 +393,22 @@ li span {
   cursor: pointer;
 }
 
-.shopping-cart-container p {
+.shopping-cart-container li {
+  text-align: left;
+  font-family: "Caveat", serif;
+  margin: 2vh;
+  color: black;
+  background-color: #f0e68c;
+}
+
+#restaurant-details,
+.add-products {
   font-size: 3vh;
   font-family: "Caveat", serif;
   text-align: center;
   font-weight: 500;
   color: black;
+  margin: 3vh;
 }
 
 .product-cart {
@@ -482,6 +492,12 @@ li span {
     font-size: 2vh;
   }
 }
+
+.add-products {
+  margin: 10vh;
+}
+
+add
 
 /* EAT html */
 /* make scroll-based animations */

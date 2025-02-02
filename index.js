@@ -6,10 +6,23 @@
 // 1.do check of Input
 // 2.password
 
-const addButton = document.querySelector("add-item");
+const addToCartBtn = document.querySelectorAll(".add-item");
+const cartItems = document.querySelector("#cart-content");
+const productNames = document.querySelectorAll(".top-half");
+const productPrice = document.querySelectorAll(".bottom-half");
+const shoppingList = document.querySelector("cart-items");
+const restartBtn = document.querySelector(".btn-restart");
 
-function open() {
-  alert("add");
-}
-
-addButton.addEventListener("click", open);
+addToCartBtn.forEach((element, index) => {
+  element.onclick = function () {
+    const sentence = document.querySelector(".add-products");
+    let cartItem = document.createElement("li");
+    let itemName = productNames[index].textContent;
+    cartItem.textContent = itemName;
+    cartItems.appendChild(cartItem);
+    sentence.style.display = "none";
+  };
+  restartBtn.onclick = function () {
+    cartItems.innerHTML = "";
+  };
+});
