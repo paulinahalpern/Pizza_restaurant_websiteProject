@@ -6,6 +6,92 @@
 // 1.do check of Input
 // 2.password
 
+const menu = [
+  {
+    category: "Focaccia",
+    items: [
+      {
+        name: "Garlic Focaccia",
+        description: "Rosemary & sea salt & garlic",
+        price: 13.5,
+      },
+      {
+        name: "Herb Focaccia",
+        description: "Fiordilatte, oregano & sea salt",
+        price: 14.5,
+      },
+    ],
+  },
+  {
+    category: "Pasta",
+    items: [
+      {
+        name: "Tagliatelle Bolognese",
+        description: "Handmade tagliatelle with pork & beef ragu",
+        price: 27.0,
+      },
+      {
+        name: "Rigatoni All'Amatriciana",
+        description: "Rigatoni with pancetta, chilli & tomato sauce",
+        price: 27.0,
+      },
+      {
+        name: "Spaghetti Con Gamberi",
+        description: "Spaghetti with olive oil, garlic, prawn meat and parsley",
+        price: 35.0,
+      },
+      {
+        name: "Gnocchi Gorgonzola",
+        description: "Handmade gnocchi, cream, gorgonzola & walnuts",
+        price: 30.0,
+      },
+    ],
+  },
+  {
+    category: "Pizza",
+    items: [
+      {
+        name: "Margherita",
+        description: "Diced tomatoes & mozzarella, oregano",
+        price: 15.5,
+      },
+      { name: "Pepperoni", description: "Pepperoni & mozzarella", price: 16.5 },
+      { name: "Hawaiian", description: "Ham & pineapple", price: 16.5 },
+      {
+        name: "Capricciosa",
+        description: "Tomato sauce, shredded ham, mushrooms, olives, cheese",
+        price: 17.5,
+      },
+    ],
+  },
+  {
+    category: "Soft Drinks",
+    items: [
+      { name: "Mineral Water", price: 6.5 },
+      { name: "Coke", price: 5.5 },
+      { name: "Sprite", price: 5.5 },
+      { name: "Fanta", price: 5.5 },
+    ],
+  },
+  {
+    category: "Dessert",
+    items: [
+      {
+        name: "Calzoncino",
+        description: "Pillowed shaped pizza w/nutella & strawberries",
+        price: 25.0,
+      },
+      {
+        name: "Tiramisu",
+        description: "Pick me up Tuscan trifle",
+        price: 17.0,
+      },
+    ],
+  },
+];
+
+// Add to Cart functionality
+
 const addToCartBtn = document.querySelectorAll(".add-item");
 const cartItems = document.querySelector("#cart-content");
 const productNames = document.querySelectorAll(".top-half");
@@ -33,5 +119,18 @@ addToCartBtn.forEach((element, index) => {
   };
   restartBtn.onclick = function () {
     cartItems.innerHTML = "";
+    sentence.style.display = "visible";
   };
 });
+
+// Search bar
+// let search = document.querySelector("[data-search]");
+// // let cartItems = document.querySelectorAll(".product-cart");
+
+// search.addEventListener("input", (e) => {
+//   let name = document.querySelectorAll(".top-half");
+//   const value = e.target.value;
+//   if (value.includes(name.textContent)) {
+//     console.log("yes");
+//   }
+// });

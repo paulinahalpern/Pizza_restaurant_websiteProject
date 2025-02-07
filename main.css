@@ -1,6 +1,7 @@
 * {
   /* border: 1px red solid; */
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -8,49 +9,57 @@ html {
 }
 
 #home-page {
-  background-image: url("./Images/background-image.jpg");
+  background-image: url("./Images/delicious-pizza-wooden-cutting-board-pepper-ketchup-right-side-isolated-dark-surface.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Caveat", serif;
+}
+
+.logo {
+  width: 100px;
+}
+
+.top-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  z-index: 1000;
 }
 
 .left-nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .right-nav {
   color: white;
   display: flex;
-  justify-content: space-between;
-  margin-right: 60vh;
+  align-items: center;
 }
 
-@media (max-width: 900px) {
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .hamburger {
-    position: absolute;
+    display: block;
     width: 25px;
     height: 25px;
-    background-color: #d4af37;
+    background-color: white;
     left: 80%;
+    cursor: pointer;
   }
-
-  .right-nav {
-    visibility: hidden;
-  }
-}
-
-@media (min-width: 900px) {
-  .hamburger {
+  section.right-nav > ul {
     display: none;
   }
-  .right-nav {
-    display: block;
-  }
 }
 
-.right-nav ul {
+.right-nav > ul {
   display: flex;
   list-style-type: none;
   transform: scale(0.94);
@@ -65,11 +74,12 @@ html {
   color: white;
   text-decoration: none;
   margin: 5px;
+  cursor: pointer;
+  font-size: 30px;
 }
 
-.logo {
-  width: 10%;
-  height: 10%;
+.right-nav ul li a:hover {
+  color: #d4af37;
 }
 
 .email-icon {
@@ -80,57 +90,59 @@ html {
 
 .opening-hours p {
   font-family: "Caveat", serif;
-  font-weight: 500;
-  font-size: 30px;
+  font-weight: 600;
+  font-size: 35px;
   text-align: center;
+  margin: 10px;
 }
 
+.opening-hours ul {
+  padding-inline-start: 0;
+  width: 40%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 20vh;
+}
 .opening-hours ul li {
   font-family: "Caveat", serif;
-  padding: 1vh;
   list-style-type: none;
-  text-align: center;
-  text-align: center;
+  letter-spacing: 1px;
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  letter-spacing: 3px;
+  justify-content: space-around;
+
+  font-weight: 500;
 }
 
-li span {
-  font-family: "Caveat", serif;
+.opening-hours ul li span {
+  font-size: 30px;
 }
 
 .opening-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white;
-  position: absolute;
-  top: 30%;
-  left: 0%;
-  max-height: fit-content;
-  transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-  font-size: 2vh;
-  line-height: 2em;
+  font-size: 2rem;
+  line-height: 1.8em;
+  height: 100vh;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .opening-hours {
-    width: 100%;
-    display: grid;
-    justify-items: center;
-    padding-bottom: 20vh;
-    position: absolute;
-    top: 25%;
-    bottom: 20%;
+    font-size: 20px;
+    width: 100vw;
+    line-height: 3em;
+  }
+  .opening-hours ul {
+    margin-right: 10px;
   }
   .opening-hours ul li span {
-    margin-left: 20px;
-    font-size: 15px;
+    font-size: 18px;
   }
 }
 
 .nav-collection {
-  transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 }
 
@@ -144,22 +156,20 @@ li span {
 }
 
 .nav-collection {
-  position: absolute;
-  left: 2%;
-  top: 90%;
+  position: fixed;
+  bottom: 5%;
   display: flex;
-  gap: 30vh;
-  justify-content: center;
+  justify-content: space-around;
+  gap: 20rem;
   align-items: center;
   font-family: "Caveat", serif;
+  width: 100%;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .nav-collection {
-    display: flex;
-    flex-direction: column;
-    top: 20%;
-    gap: 1vh;
+    bottom: 0;
+    gap: 10rem;
   }
 }
 
@@ -177,7 +187,7 @@ li span {
   transition: background-color 0.5s;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .nav-span-item {
     font-size: 10px;
   }
@@ -199,11 +209,12 @@ li span {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 15vh;
+  height: 10vh;
   background: rgba(0, 0, 0);
   border-top: 1px solid rgba(255, 255, 255, 0.2);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   position: sticky;
+  z-index: 2222;
   top: 0;
 }
 
@@ -257,7 +268,7 @@ li span {
   right: 0;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .nav-bar-order {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -274,9 +285,10 @@ li span {
 }
 
 .pizzeria-address {
-  background: no-repeat center/100% url("./Images/pizza-white-wooden-table.jpg");
+  background: no-repeat center/100%
+    url("./Images/delicious-homemade-pizza-wooden-board-tomatoes-oil-bottle-pepper-ketchup-right-side-dark-surface.jpg");
   border-radius: 20px;
-  height: 70vh;
+  height: 50vh;
   z-index: 200;
   margin-top: 2vh;
 }
@@ -285,9 +297,8 @@ li span {
   font-size: 5vh;
   font-family: "Caveat", serif;
   position: absolute;
-  top: 50%;
-  left: 30%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  right: 2%;
   font-weight: 500;
   font-size: 7vh;
   color: black;
@@ -312,18 +323,18 @@ li span {
 .aside-menu {
   display: flex;
   flex-direction: column;
-  gap: 10vh;
-  margin-top: 20vh;
+  gap: 5vh;
+  margin-top: 5vh;
 }
 
 .aside-menu button {
   border-radius: 50px;
   font-family: "Caveat", serif;
-  width: 30vh;
-  height: 15vh;
+  width: 20vh;
+  height: 10vh;
   font-size: 3vh;
   background-color: #f5f0e1;
-  margin-left: 2vh;
+  margin-left: 3vh;
 }
 
 .aside-menu button:hover {
@@ -348,11 +359,12 @@ li span {
 
 .grid-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6vh;
+  grid-template-columns: auto auto;
+  gap: 1.5vh;
   padding: 5vh;
-  color: black;
+  color: white;
 }
+
 @media (max-width: 1000px) {
   .grid-layout {
     display: grid;
@@ -363,18 +375,22 @@ li span {
 .product-class-title,
 .shopping-list {
   width: 100%;
-  text-align: center;
   font-family: "Caveat", serif;
   font-size: 8vh;
   color: black;
-  margin: 2vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 .shopping-cart-container {
-  border: 4px solid #fffff0;
+  background-image: url("Images/delicious-pizza-traditional-italian-pizza.jpg");
   width: 90%;
-  height: 120vh;
-  margin: 10px;
+  height: 200vh;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
 }
 .shopping-cart-container img {
   display: block;
@@ -425,7 +441,7 @@ li span {
   font-family: "Caveat", serif;
   text-align: center;
   font-weight: 500;
-  color: black;
+  color: white;
   margin: 3vh;
 }
 
@@ -477,27 +493,6 @@ li span {
   transition: background-color 0.5s;
 }
 
-#coke {
-  background-image: url("Images/2096.jpg");
-  background-position: center;
-  color: white;
-}
-
-#mineral-water {
-  background-image: url("Images/91691.jpg");
-  background-position: center;
-}
-
-#fanta {
-  background-image: url("Images/drops-water-close-up-yellow-surface.jpg");
-  background-position: center;
-}
-
-#sprite {
-  background-image: url("Images/air-bubbles-oil-stain-gradient-blurred-background.jpg");
-  background-position: center;
-}
-
 @media (max-width: 1000px) {
   .product-cart {
     font-size: 3vh;
@@ -521,7 +516,7 @@ add
 /* make scroll-based animations */
 
 #eat-page {
-  background-color: #edeade;
+  background-image: url("Images/top-view-delicious-pizza-wooden-cutting-board-dark-blue-surface.jpg");
 }
 
 h1 {
@@ -543,10 +538,9 @@ h1 {
 
 .grid-layout-menu {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 120vh;
-  gap: 5vh;
-  padding: 3vh;
+  gap: 20vh;
   color: white;
   font-size: 3vh;
   font-family: "Caveat", serif;
@@ -586,6 +580,10 @@ h1 {
 }
 
 /* DRINK MENU */
+
+#drink-page {
+  background-image: url("Images/top-view-delicious-pizza-wooden-cutting-board-dark-blue-surface.jpg");
+}
 
 .drink-menu {
   display: grid;

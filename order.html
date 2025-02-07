@@ -22,14 +22,10 @@
         class="logo-order-view"
       />
       <div class="search-product">
-        
+        <label for="'search">Search dish</label>
         <input
-          type="text"
-          name="search-product"
-          autocomplete="false"
-          class="input-search"
-          placeholder="Search..."
-        />  
+          type="search"
+          class="input-search" data-search>  
         <button>
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28"
                 viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
@@ -43,18 +39,18 @@
     </button>
     </div>
     <div>
-        <button class="btn-add-to-cart">
-          <img
-            src="Images/shopping-cart.png"
-            alt="shopping cart icon"
-            class="shop-cart-icon"
-          />
-        </button>
-      
-      <button class="btn-user">
+      <div class="form sign-up">
+        <form>
+            <h1>Create account</h1>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign Up</button>
+        </form>
+      <!-- <button class="btn-user">
         <img src="Images/user.png" alt="user icon" class="user-icon" />
-      </button>
-
+      </button> -->
+    </div>
     </div>
     </header>
     <div class="pizzeria-address">
@@ -65,25 +61,23 @@
     <div class="main-content">
     <aside class="aside-menu">
         <button>
-            <span>STARTER</span>
+            <span>Starter</span>
         </button>
         <button>
-            <span>PASTA</span>
+            <span>Pasta</span>
         </button>
         <button>
-            <span>PIZZA</span>
+            <span>Pizza</span>
         </button>
         <button>
-            <span>SOFT DRINKS</span>
+            <span>Soft Drinks</span>
         </button>
         <button>
-            <span>DESSERT</span>
+            <span>Dessert</span>
         </button>
     </aside>
     <div class="product-list">
         <div class="product-class-title">Starter</div>
-
-        
         <div class="grid-layout">
             <div class="product-cart">
                 <div class="product-details">
@@ -100,7 +94,7 @@
                 <div><button class="add-item">ADD</button></div>
             </div>
         </div>
-        <div class="product-class-title">PASTA</div>
+        <div class="product-class-title">Pasta</div>
         <div class="grid-layout">
             <div class="product-cart">
                 <div class="product-details">
@@ -131,7 +125,7 @@
                 <div><button class="add-item">ADD</button></div>
             </div>
         </div>
-        <div class="product-class-title">PIZZA</div>
+        <div class="product-class-title">Pizza</div>
         <div class="grid-layout">
             <div class="product-cart">
                 <div class="product-details">
@@ -162,9 +156,9 @@
                 <div><button class="add-item">ADD</button></div>
             </div>
         </div>
-        <div class="product-class-title">SOFT DRINKS</div>
+        <div class="product-class-title">Soft Drinks</div>
         <div class="grid-layout">
-            <div class="product-cart" id="mineral-water">
+            <div class="product-cart">
                 <div class="product-details">
                 <div class="top-half" >Mineral Water </div>
                             
@@ -172,21 +166,21 @@
             </div>
                 <div><button class="add-item">ADD</button></div>
             </div>
-            <div class="product-cart" id="coke">
+            <div class="product-cart">
                 <div class="product-details">
                 <div class="top-half">Coke</div>              
                 <div class="bottom-half">$5.50</div>
             </div>
                 <div><button class="add-item">ADD</button></div>
             </div>
-            <div class="product-cart" id="sprite">
+            <div class="product-cart">
                 <div class="product-details">
                 <div class="top-half">Sprite</div>              
                 <div class="bottom-half">$5.50</div>
             </div>
                 <div><button class="add-item">ADD</button></div>
             </div>
-            <div class="product-cart" id="fanta">
+            <div class="product-cart" >
                 <div class="product-details">
                 <div class="top-half">Fanta</div>              
                 <div class="bottom-half">$5.50</div>
@@ -194,7 +188,7 @@
                 <div><button class="add-item">ADD</button></div>
             </div>
         </div>
-        <div class="product-class-title">DESSERT</div>
+        <div class="product-class-title">Dessert</div>
         <div class="grid-layout">
             <div class="product-cart">
                 <div class="product-details">
