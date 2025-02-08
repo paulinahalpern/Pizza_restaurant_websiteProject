@@ -6,6 +6,7 @@
 
 html {
   height: 100%;
+  scroll-behavior: smooth;
 }
 
 #home-page {
@@ -201,6 +202,7 @@ html {
 
 #order-page {
   background-color: #edeade;
+  font-family: "Caveat", serif;
 }
 
 .nav-bar-order {
@@ -217,6 +219,16 @@ html {
   top: 0;
 }
 
+.nav-bar-order a{
+  color:white;
+}
+
+@media (max-width: 768px) {
+  .nav-bar-order {
+    justify-content: space-between;
+  }
+}
+
 .btn-add-to-cart .shop-cart-icon {
   max-height: 4vh;
 }
@@ -229,13 +241,13 @@ html {
   width: 20vh;
 }
 
-.btn-user .user-icon {
+#btn-user .user-icon {
   max-height: 4vh;
 }
 
-.btn-user {
+#btn-user {
   border-radius: 10px;
-  margin-right: 10vh;
+  margin-right: 2vh;
 }
 
 .logo-order-view {
@@ -270,7 +282,7 @@ html {
 @media (max-width: 768px) {
   .nav-bar-order {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto ;
   }
   .input-search {
     width: 20vh;
@@ -278,7 +290,7 @@ html {
   .btn-add-to-cart {
     width: 10vh;
   }
-  .btn-user {
+  #btn-user {
     width: 10vh;
   }
 }
@@ -354,6 +366,20 @@ html {
 .order-list {
   color: white;
   width: 50%;
+}
+
+@media (max-width: 768px){
+  .order-list{
+    display: none;
+  }
+  .aside-menu{
+    display:none;
+  }
+  .pizzeria-address div{
+    font-size: 2rem;
+    top:40%;
+    color:white;
+  }
 }
 
 .grid-layout {
@@ -492,7 +518,7 @@ html {
   transition: background-color 0.5s;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .product-cart {
     font-size: 3vh;
     font-weight: 500;
@@ -509,37 +535,104 @@ html {
   margin: 10vh;
 }
 
-add
+/* LOGIN */
+
+#form{
+  top:70%;
+  right:0;
+  position: absolute;
+  color:black;
+  font-size: 2rem;
+  background-color: #edeade ;
+  transition:ease-in-out .2s;
+  overflow:hidden;
+  height:0;
+  border-radius: 5%;
+}
+
+#form.active{
+  border: 3px solid #f1f1f1;
+  height: 30vh;
+  margin:1vh;
+
+}
+
+#btn-user{
+  cursor: pointer;
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  
+  
+}
+
+button[type='submit'] {
+  cursor:pointer;
+  border: 3px solid #f1f1f1;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  background-color: rgb(245, 245, 228);
+
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(51, 50, 50);
+  color:white;
+}
+
+
+#error{
+  color:black;
+  font-size: 1rem;
+}
+
+
 
 /* EAT html */
 /* make scroll-based animations */
 
-#eat-page {
-  background-image: url("Images/top-view-delicious-pizza-wooden-cutting-board-dark-blue-surface.jpg");
+#eat-page , #drink-page {
+  background-image: url("Images/delicious-pizza-traditional-italian-pizza.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  font-family: "Caveat", serif;
+  height: fit-content;
 }
 
 h1 {
   font-size: 8vh;
   padding: 2vh;
-  color: black;
+  color: white;
   text-align: center;
-  font-family: "Caveat", serif;
   letter-spacing: 3vh;
 }
 
 .main-title {
   font-size: 4vh;
-  color: black;
+  color: white;
   text-align: left;
-  padding-left: 2vh;
-  font-family: "Caveat", serif;
+  padding: 2vh;
+  
 }
 
 .grid-layout-menu {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 120vh;
-  gap: 20vh;
+  gap:5px;
   color: white;
   font-size: 3vh;
   font-family: "Caveat", serif;
@@ -565,7 +658,7 @@ h1 {
   text-align: center;
   position: relative;
   width: 30vh;
-  height: 25vh;
+  
 }
 
 .top-half-menu {
@@ -573,16 +666,11 @@ h1 {
 }
 
 .bottom-half-menu {
-  position: absolute;
-  right: 0;
-  margin: 4vh;
+  left: 0;
 }
 
 /* DRINK MENU */
 
-#drink-page {
-  background-image: url("Images/top-view-delicious-pizza-wooden-cutting-board-dark-blue-surface.jpg");
-}
 
 .drink-menu {
   display: grid;
@@ -622,4 +710,11 @@ h1 {
 .drink-column ul li {
   padding: 2vh;
   padding-left: 0;
+}
+
+
+/* VISIT PAGE */
+
+#visit-page{
+  
 }

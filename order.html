@@ -21,7 +21,8 @@
       restaurant"
         class="logo-order-view"
       />
-      <div class="search-product">
+      <a href="./index.html">HOME</a>
+      <!-- <div class="search-product">
         <label for="'search">Search dish</label>
         <input
           type="search"
@@ -36,22 +37,26 @@
                 <path d="M13 6l6 6"></path>
             </svg>
         </button> 
-    </button>
+    </button> -->
     </div>
-    <div>
-      <div class="form sign-up">
-        <form>
-            <h1>Create account</h1>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
-            <button>Sign Up</button>
-        </form>
-      <!-- <button class="btn-user">
-        <img src="Images/user.png" alt="user icon" class="user-icon" />
-      </button> -->
-    </div>
-    </div>
+    <div class="login-page">
+        <form id="form" action="#" method="get">
+          <div class="login-name">
+           <label for="name">Name:</label>
+           <input id="name" name="name" type="text">
+           </div>
+           <div class="login-password">
+            <label for="password">Password:</label>
+            <input id="password" name="password" type="password">
+            </div>
+            <button type="submit">Submit</button>
+            <div id="error"></div>
+            </form>
+            <button id="btn-user">
+                <img src="Images/user.png" alt="user icon" class="user-icon" />
+              </button>
+        </div>
+          
     </header>
     <div class="pizzeria-address">
       <div> Fiery Pizzeria 804/222 Bay Road, <br>Sandringham </div>
@@ -59,153 +64,86 @@
       </div>
     </div>
     <div class="main-content">
-    <aside class="aside-menu">
-        <button>
-            <span>Starter</span>
-        </button>
-        <button>
-            <span>Pasta</span>
-        </button>
-        <button>
-            <span>Pizza</span>
-        </button>
-        <button>
-            <span>Soft Drinks</span>
-        </button>
-        <button>
-            <span>Dessert</span>
-        </button>
-    </aside>
-    <div class="product-list">
-        <div class="product-class-title">Starter</div>
-        <div class="grid-layout">
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Garlic Focaccia <br>Rosemary & sea salt & garlic</br></div>              
-                <div class="bottom-half">$13.50</div>
+        <aside class="aside-menu">
+            <button type="button" onclick="location.href='#starter'">Starter</button>
+            <button type="button" onclick="location.href='#pasta'">Pasta</button>
+            <button type="button" onclick="location.href='#pizza'">Pizza</button>
+            <button type="button" onclick="location.href='#soft-drinks'">Soft Drinks</button>
+            <button type="button" onclick="location.href='#dessert'">Dessert</button>
+        </aside>
+    
+        <div class="product-list">
+            <section class="product-class-title" id="starter">Starter</section>
+            <div class="grid-layout">
+                <div class="product-cart">
+                    <div class="top-half">Garlic Focaccia <br>Rosemary & sea salt & garlic</div>              
+                    <div class="bottom-half">$13.50</div>
+                    <button class="add-item">ADD</button>
+                </div>
+                <div class="product-cart">
+                    <div class="top-half">Herb Focaccia <br>Fiordilatte, oregano & sea salt</div>              
+                    <div class="bottom-half">$14.50</div>
+                    <button class="add-item">ADD</button>
+                </div>
             </div>
-                <div><button class="add-item">ADD</button></div>
+    
+            <section class="product-class-title" id="pasta">Pasta</section>
+            <div class="grid-layout">
+                <div class="product-cart">
+                    <div class="top-half">Tagliatelle Bolognese <br>Handmade tagliatelle with pork & beef ragu</div>              
+                    <div class="bottom-half">$27.00</div>
+                    <button class="add-item">ADD</button>
+                </div>
+                <div class="product-cart">
+                    <div class="top-half">Rigatoni All'Amatriciana <br>Rigatoni with pancetta, chilli & tomato sauce</div>              
+                    <div class="bottom-half">$27.00</div>
+                    <button class="add-item">ADD</button>
+                </div>
             </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Herb Focaccia <br>Fiordilatte, oreegano & sea salt </br></div>              
-                <div class="bottom-half">$14.50</div>
+    
+            <section class="product-class-title" id="pizza">Pizza</section>
+            <div class="grid-layout">
+                <div class="product-cart">
+                    <div class="top-half">Margherita <br>Diced tomatoes & mozzarella, oregano</div>              
+                    <div class="bottom-half">$15.50</div>
+                    <button class="add-item">ADD</button>
+                </div>
+                <div class="product-cart">
+                    <div class="top-half">Pepperoni <br>Pepperoni & mozzarella</div>              
+                    <div class="bottom-half">$16.50</div>
+                    <button class="add-item">ADD</button>
+                </div>
             </div>
-                <div><button class="add-item">ADD</button></div>
+    
+            <section class="product-class-title" id="soft-drinks">Soft Drinks</section>
+            <div class="grid-layout">
+                <div class="product-cart">
+                    <div class="top-half">Mineral Water</div>
+                    <div class="bottom-half">$6.50</div>
+                    <button class="add-item">ADD</button>
+                </div>
+                <div class="product-cart">
+                    <div class="top-half">Coke</div>              
+                    <div class="bottom-half">$5.50</div>
+                    <button class="add-item">ADD</button>
+                </div>
             </div>
-        </div>
-        <div class="product-class-title">Pasta</div>
-        <div class="grid-layout">
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Tagliatelle Bolognese <br>Handmade taglatelle with pork & beef ragu</br></div>              
-                <div class="bottom-half">$27.00</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Rigatoni All'Amatriciana <br>Rigatoni with pancetta, chilli & tomato souce </br></div>              
-                <div class="bottom-half">$27.00</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Spaghetti Con Gamberi <br>Spaghetti with olive oil,garlic,prawn meat and parsley </br></div>              
-                <div class="bottom-half">$35.00</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Gnocchi Gorgonzola <br>Handmade gnocchi, cream, gorgonzola & walnuts </br></div>              
-                <div class="bottom-half">$30.00</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-        </div>
-        <div class="product-class-title">Pizza</div>
-        <div class="grid-layout">
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Margherita <br>Diced tomatoes & mozzarella, oregano</br></div>              
-                <div class="bottom-half">$15.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Pepperoni <br>Pepperoni & mozarella </br></div>              
-                <div class="bottom-half">$16.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Hawaiian <br>Ham & pineaaple </br></div>              
-                <div class="bottom-half">$16.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Capricciosa <br>Tomato sauce, shredded ham, mushrooms, olives, cheese </br></div>              
-                <div class="bottom-half">$17.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
+
+            <section class="product-class-title" id="dessert">Dessert</section>
+            <div class="grid-layout">
+                <div class="product-cart">
+                    <div class="top-half">Calzoncino <br>Pillowed-shaped pizza with Nutella & strawberries</div>              
+                    <div class="bottom-half">$25.00</div>
+                    <button class="add-item">ADD</button>
+                </div>
+                <div class="product-cart">
+                    <div class="top-half">Tiramisu <br>Pick-me-up Tuscan trifle</div>              
+                    <div class="bottom-half">$17.00</div>
+                    <button class="add-item">ADD</button>
+                </div>
             </div>
         </div>
-        <div class="product-class-title">Soft Drinks</div>
-        <div class="grid-layout">
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half" >Mineral Water </div>
-                            
-                <div class="bottom-half">$6.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Coke</div>              
-                <div class="bottom-half">$5.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Sprite</div>              
-                <div class="bottom-half">$5.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart" >
-                <div class="product-details">
-                <div class="top-half">Fanta</div>              
-                <div class="bottom-half">$5.50</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-        </div>
-        <div class="product-class-title">Dessert</div>
-        <div class="grid-layout">
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Calzoncino <br>pillowed shaped pizza w/nutella & strawberries</br></div>              
-                <div class="bottom-half">$25.00</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-            <div class="product-cart">
-                <div class="product-details">
-                <div class="top-half">Tiramisu <br> pick me up tuscan trifle </br></div>              
-                <div class="bottom-half">$17.00</div>
-            </div>
-                <div><button class="add-item">ADD</button></div>
-            </div>
-        </div>
-    </div>
+    
     <div class="order-list">
         <div class="shopping-list">Shopping Cart</div>
         
@@ -226,5 +164,5 @@
     
 </div
   </body>
-  <script src="index.js"></script>
+  <script  src="index.js"></script>
 </html>
