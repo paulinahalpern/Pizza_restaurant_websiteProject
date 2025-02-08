@@ -1,0 +1,681 @@
+* {
+  /* border: 1px red solid; */
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+#home-page {
+  background-image: url("./Images/delicious-pizza-wooden-cutting-board-pepper-ketchup-right-side-isolated-dark-surface.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Caveat", serif;
+}
+
+.logo {
+  width: 100px;
+}
+
+.top-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem;
+  z-index: 1000;
+}
+
+.left-nav {
+  display: flex;
+}
+.right-nav {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    left: 80%;
+    cursor: pointer;
+  }
+  section.right-nav > ul {
+    display: none;
+  }
+}
+
+.right-nav > ul {
+  display: flex;
+  list-style-type: none;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+.right-nav ul li {
+  padding: 2vh;
+}
+
+.right-nav ul li a {
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.right-nav ul li a:hover {
+  color: #d4af37;
+}
+
+.email-icon {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+.opening-hours p {
+  font-family: "Caveat", serif;
+  font-weight: 600;
+  font-size: 35px;
+  text-align: center;
+  margin: 10px;
+}
+
+.opening-hours ul {
+  padding-inline-start: 0;
+  width: 40%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: 20vh;
+}
+.opening-hours ul li {
+  font-family: "Caveat", serif;
+  list-style-type: none;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: space-around;
+
+  font-weight: 500;
+}
+
+.opening-hours ul li span {
+  font-size: 30px;
+}
+
+.opening-hours {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  font-size: 2rem;
+  line-height: 1.8em;
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .opening-hours {
+    font-size: 20px;
+    width: 100vw;
+    line-height: 3em;
+  }
+  .opening-hours ul {
+    margin-right: 10px;
+  }
+  .opening-hours ul li span {
+    font-size: 18px;
+  }
+}
+
+.nav-collection {
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-collection {
+  position: fixed;
+  bottom: 5%;
+  display: flex;
+  justify-content: space-around;
+  gap: 20rem;
+  align-items: center;
+  font-family: "Caveat", serif;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav-collection {
+    bottom: 0;
+    gap: 10rem;
+  }
+}
+
+.nav-item {
+  font-size: 70px;
+  font-family: "Caveat", serif;
+}
+.nav-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-span-item:hover {
+  color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+@media (max-width: 768px) {
+  .nav-span-item {
+    font-size: 10px;
+  }
+}
+
+.right-nav li a:hover {
+  color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+/* ORDER PAGE  need to add mobile version*/
+
+#order-page {
+  background-color: #edeade;
+  font-family: "Caveat", serif;
+}
+
+.nav-bar-order {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 10vh;
+  background: rgba(0, 0, 0);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: sticky;
+  z-index: 2222;
+  top: 0;
+}
+
+.btn-add-to-cart .shop-cart-icon {
+  max-height: 4vh;
+}
+.btn-add-to-cart {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-right: 10vh;
+  width: 20vh;
+}
+
+.btn-user .user-icon {
+  max-height: 4vh;
+}
+
+.btn-user {
+  border-radius: 10px;
+  margin-right: 10vh;
+}
+
+.logo-order-view {
+  max-width: 10vh;
+}
+
+.search-product {
+  display: flex;
+  width: 50vh;
+  max-width: 100%;
+  gap: 4vh;
+  position: relative;
+}
+
+.search-product input {
+  width: 50vh;
+  width: 100%;
+  height: 4vh;
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.search-product button {
+  background: gold;
+  border-radius: 50%;
+  height: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-bar-order {
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+  .input-search {
+    width: 20vh;
+  }
+  .btn-add-to-cart {
+    width: 10vh;
+  }
+  .btn-user {
+    width: 10vh;
+  }
+}
+
+.pizzeria-address {
+  background: no-repeat center/100%
+    url("./Images/delicious-homemade-pizza-wooden-board-tomatoes-oil-bottle-pepper-ketchup-right-side-dark-surface.jpg");
+  border-radius: 20px;
+  height: 50vh;
+  z-index: 200;
+  margin-top: 2vh;
+}
+
+.pizzeria-address div {
+  font-size: 5vh;
+  font-family: "Caveat", serif;
+  position: absolute;
+  top: 25%;
+  right: 2%;
+  font-weight: 500;
+  font-size: 7vh;
+  color: black;
+  animation-name: text-color-change;
+  animation-duration: 4s;
+}
+@keyframes text-color-change {
+  0% {
+    color: rgb(0, 0, 0);
+  }
+  25% {
+    color: rgb(142, 142, 140);
+  }
+  50% {
+    color: rgb(192, 192, 194);
+  }
+  100% {
+    color: rgb(0, 0, 0);
+  }
+}
+
+.aside-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin-top: 5vh;
+}
+
+.aside-menu button {
+  border-radius: 50px;
+  font-family: "Caveat", serif;
+  width: 20vh;
+  height: 10vh;
+  font-size: 3vh;
+  background-color: #f5f0e1;
+  margin-left: 3vh;
+}
+
+.aside-menu button:hover {
+  background-color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+.main-content {
+  display: flex;
+  flex: 3 1 auto;
+  gap: 10vh;
+}
+
+.product-list {
+  color: white;
+  width: 100%;
+}
+.order-list {
+  color: white;
+  width: 50%;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1.5vh;
+  padding: 5vh;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .grid-layout {
+    display: grid;
+    grid-template-columns: auto;
+  }
+}
+
+.product-class-title,
+.shopping-list {
+  width: 100%;
+  font-family: "Caveat", serif;
+  font-size: 8vh;
+  color: black;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.shopping-cart-container {
+  background-image: url("Images/delicious-pizza-traditional-italian-pizza.jpg");
+  width: 90%;
+  height: 200vh;
+  margin: 5px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50px;
+}
+.shopping-cart-container img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.btn-restart {
+  margin: 2vh;
+  border: hidden;
+  font-family: "Caveat", serif;
+  font-size: 3vh;
+  cursor: pointer;
+}
+
+.shopping-cart-container li {
+  text-align: left;
+  font-family: "Caveat", serif;
+  margin: 2vh;
+  color: black;
+  background-color: #f0e68c;
+  display: flex;
+}
+
+.cart-price {
+  text-align: right;
+  color: black;
+  margin: 2vh;
+}
+
+.summary {
+  text-align: center;
+  color: black;
+  font-family: "Caveat", serif;
+  font-size: 5vh;
+}
+
+.summary span {
+  margin-left: 2vh;
+}
+
+#restaurant-details,
+.add-products {
+  font-size: 3vh;
+  font-family: "Caveat", serif;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  margin: 3vh;
+}
+
+.product-cart {
+  background-color: #f5f0e1;
+  background-position: center;
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 50px;
+  font-family: "Caveat", serif;
+  font-size: 3vh;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  width: 40vh;
+  height: 25vh;
+}
+
+.top-half {
+  margin: 2vh;
+  height: 11vh;
+}
+
+.bottom-half {
+  position: absolute;
+  left: 0;
+  margin: 4vh;
+}
+
+.add-item {
+  position: absolute;
+  right: 0;
+  margin: 4vh;
+  border-radius: 10%;
+  border: none;
+  background-color: #f0e68c;
+  border-radius: 20px;
+  min-height: 30px;
+  min-width: 120px;
+  font-family: "Caveat", serif;
+  font-weight: 700;
+  font-size: 2vh;
+  letter-spacing: 3px;
+  cursor: pointer;
+}
+
+.add-item:hover {
+  background-color: #d4af37;
+  transition: background-color 0.5s;
+}
+
+@media (max-width: 1000px) {
+  .product-cart {
+    font-size: 3vh;
+    font-weight: 500;
+  }
+  .top-half {
+    font-size: 3vh;
+  }
+  .bottom-half {
+    font-size: 2vh;
+  }
+}
+
+.add-products {
+  margin: 10vh;
+}
+
+/* LOGIN */
+
+#form{
+  border: 3px solid #f1f1f1;
+  top:0;
+  right:0;
+  position: absolute;
+  color:blacvk;
+  font-size: 2rem;
+  background-color: #edeade ;
+  margin:3px;
+  
+}
+
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  
+  
+}
+
+button[type='submit'] {
+  cursor:pointer;
+  border: 3px solid #f1f1f1;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  background-color: rgb(245, 245, 228);
+}
+
+button[type="submit"]:hover {
+  background-color: rgb(51, 50, 50);
+  color:white;
+}
+
+#name,#password{
+  align-items: end;
+}
+
+#error{
+  color:black;
+  font-size: 1rem;
+}
+
+
+
+
+/* EAT html */
+/* make scroll-based animations */
+
+#eat-page {
+  background-image: url("Images/top-view-delicious-pizza-wooden-cutting-board-dark-blue-surface.jpg");
+}
+
+h1 {
+  font-size: 8vh;
+  padding: 2vh;
+  color: black;
+  text-align: center;
+  font-family: "Caveat", serif;
+  letter-spacing: 3vh;
+}
+
+.main-title {
+  font-size: 4vh;
+  color: black;
+  text-align: left;
+  padding-left: 2vh;
+  font-family: "Caveat", serif;
+}
+
+.grid-layout-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 120vh;
+  gap: 20vh;
+  color: white;
+  font-size: 3vh;
+  font-family: "Caveat", serif;
+}
+
+@media (max-width: 900px) {
+  .grid-layout-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.product-menu {
+  background-color: #f5f0e1;
+  background-position: center;
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
+  color: black;
+  border-radius: 30px;
+  font-family: "Caveat", serif;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  position: relative;
+  width: 30vh;
+  height: 25vh;
+}
+
+.top-half-menu {
+  padding: 2vh;
+}
+
+.bottom-half-menu {
+  position: absolute;
+  right: 0;
+  margin: 4vh;
+}
+
+/* DRINK MENU */
+
+#drink-page {
+  background-image: url("Images/top-view-delicious-pizza-wooden-cutting-board-dark-blue-surface.jpg");
+}
+
+.drink-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+  color: white;
+  max-width: 120vh;
+  font-family: "Caveat", serif;
+  padding: 7vh;
+  gap: 5vh;
+  font-size: 3vh;
+}
+.drink-column {
+  border: 1px solid #fffff0;
+  border-radius: 20px;
+  background-color: #fdfdf8;
+  color: black;
+}
+
+@media (max-width: 900px) {
+  .drink-menu {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.drink-column p {
+  padding: 5vh;
+  font-size: 5vh;
+}
+
+.drink-column ul {
+  list-style-type: none;
+  text-align: left;
+}
+
+.drink-column ul li {
+  padding: 2vh;
+  padding-left: 0;
+}
