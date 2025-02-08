@@ -548,6 +548,7 @@ button[type='submit'] {
   width: 100%;
   font-size: 1rem;
   background-color: rgb(245, 245, 228);
+
 }
 
 button[type="submit"]:hover {
