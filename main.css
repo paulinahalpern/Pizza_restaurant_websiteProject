@@ -46,18 +46,35 @@ html {
   display: none;
 }
 
+
+
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+    position: fixed;
     width: 25px;
     height: 25px;
     background-color: white;
-    left: 80%;
+    right:5%;
     cursor: pointer;
   }
   section.right-nav > ul {
+    position: absolute;
+    top:30%;
+    right:10%;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    background-color: #edeade;
+    transition: 0.2s ease-in-out;
     display: none;
+    z-index: 2222;
+    border-radius: 10%;
   }
+  section.right-nav > ul.active{
+    display: flex;
+   
+  }
+  
 }
 
 .right-nav > ul {
@@ -81,6 +98,12 @@ html {
 
 .right-nav ul li a:hover {
   color: #d4af37;
+}
+
+@media ( max-width:768px){
+  .right-nav ul li a{
+    color:black;
+  }
 }
 
 .email-icon {
@@ -168,8 +191,8 @@ html {
 
 @media (max-width: 768px) {
   .nav-collection {
-    bottom: 0;
-    gap: 10rem;
+    
+    gap: 2rem;
   }
 }
 
@@ -189,7 +212,7 @@ html {
 
 @media (max-width: 768px) {
   .nav-span-item {
-    font-size: 10px;
+    font-size: 2rem;
   }
 }
 
@@ -254,6 +277,23 @@ html {
   max-width: 10vh;
 }
 
+.right-nav-order{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.right-nav-order a{
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.right-nav-order a:hover{
+  color:#d4af37
+}
+
+
+
 .search-product {
   display: flex;
   width: 50vh;
@@ -280,18 +320,8 @@ html {
 }
 
 @media (max-width: 768px) {
-  .nav-bar-order {
-    display: grid;
-    grid-template-columns: auto auto ;
-  }
-  .input-search {
-    width: 20vh;
-  }
-  .btn-add-to-cart {
-    width: 10vh;
-  }
-  #btn-user {
-    width: 10vh;
+   .nav-bar-order {
+    display: flex;
   }
 }
 
@@ -368,20 +398,6 @@ html {
   width: 50%;
 }
 
-@media (max-width: 768px){
-  .order-list{
-    display: none;
-  }
-  .aside-menu{
-    display:none;
-  }
-  .pizzeria-address div{
-    font-size: 2rem;
-    top:40%;
-    color:white;
-  }
-}
-
 .grid-layout {
   display: grid;
   grid-template-columns: auto auto;
@@ -410,12 +426,11 @@ html {
 .shopping-cart-container {
   background-image: url("Images/delicious-pizza-traditional-italian-pizza.jpg");
   width: 90%;
-  height: 200vh;
   margin: 5px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 .shopping-cart-container img {
   display: block;
@@ -445,7 +460,8 @@ html {
 
 .cart-price {
   text-align: right;
-  color: black;
+  color: white;
+  font-size: 2rem;
   margin: 2vh;
 }
 
@@ -535,6 +551,50 @@ html {
   margin: 10vh;
 }
 
+#btn-shop-cart{
+  display: none;
+}
+
+
+.nav-bar-right{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Shopping cart mobile */
+@media (max-width: 768px){
+  .shopping-list{
+    display: none;
+  }
+  .order-list{
+    position: absolute;
+    top:10%;
+    left:30%;
+    display: none;
+  }
+  .cart-price{
+    margin:2vh;
+    color:white;
+    font-size:1rem;
+  }
+  .aside-menu{
+    display:none;
+  }
+  .pizzeria-address div{
+    font-size: 2.5rem;
+    top:25%;
+    color:white;
+    text-align: right;
+  }
+  .summary{
+    text-align: center;
+    color:white;
+  }
+  .order-list.active{
+    display:flex;
+  }
+}
+
 /* LOGIN */
 
 #form{
@@ -557,6 +617,24 @@ html {
 
 }
 
+@media (max-width: 768px) {
+  #btn-shop-cart{
+    display: flex;
+    width:5vh;
+    height:5vh;
+    justify-content: center;
+    align-items: center; 
+    margin: 4vh;
+    border-radius: 10px;
+    
+  }
+  #shop-cart-icon{
+    width:3vh;
+    height:3vh;
+    padding: 0; 
+  }
+}
+
 #btn-user{
   cursor: pointer;
 }
@@ -569,8 +647,6 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;
-  
-  
 }
 
 button[type='submit'] {
@@ -600,6 +676,7 @@ button[type="submit"]:hover {
 
 
 
+
 /* EAT html */
 /* make scroll-based animations */
 
@@ -610,6 +687,12 @@ button[type="submit"]:hover {
   background-size: cover;
   font-family: "Caveat", serif;
   height: fit-content;
+}
+
+@media (max-width:768px) {
+  #eat-page , #drink-page{
+    background-repeat:repeat;
+}
 }
 
 h1 {
@@ -684,13 +767,15 @@ h1 {
   font-size: 3vh;
 }
 .drink-column {
-  border: 1px solid #fffff0;
+  background-color: #f5f0e1;
+  background-position: center;
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   background-color: #fdfdf8;
   color: black;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .drink-menu {
     display: grid;
     grid-template-columns: 1fr;
@@ -716,5 +801,66 @@ h1 {
 /* VISIT PAGE */
 
 #visit-page{
-  
+  font-family: "Caveat", serif;
+  background-image: url(Images/delicious-pizza-wooden-cutting-board-pepper-ketchup-right-side-isolated-dark-surface.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
+
+.header-visit-page{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reservation-cart{
+  position: absolute;
+  top:20%;
+  right:5%;
+  background-color: #f5f0e1;
+  box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10%;
+  background-color: #fdfdf8;
+  color: black;
+  height: fit-content;
+  width:max-content;
+  padding:30px;
+}
+
+@media (max-width: 768px) {
+  .reservation-cart {
+    width:100vw;
+    margin: auto;
+    top:10%;
+    width:100%;
+    padding:5vh;
+  }
+  .header-visit-page h1{
+    font-size:3rem;
+    padding:0;
+    letter-spacing: 0;
+}
+.header-visit-page{
+  justify-content: space-around;
+}
+}
+
+.card-content h2{
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 5%; 
+}
+.form-booking-details{
+  margin:auto
+}
+.btn-book-table{
+  display: flex;
+  margin:auto;
+  font-size: 2rem;
+  align-items: center;
+}
+
+
+

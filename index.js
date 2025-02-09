@@ -6,92 +6,6 @@
 // 1.do check of Input
 // 2.password
 
-// const menu = [
-//   {
-//     category: "Focaccia",
-//     items: [
-//       {
-//         name: "Garlic Focaccia",
-//         description: "Rosemary & sea salt & garlic",
-//         price: 13.5,
-//       },
-//       {
-//         name: "Herb Focaccia",
-//         description: "Fiordilatte, oregano & sea salt",
-//         price: 14.5,
-//       },
-//     ],
-//   },
-//   {
-//     category: "Pasta",
-//     items: [
-//       {
-//         name: "Tagliatelle Bolognese",
-//         description: "Handmade tagliatelle with pork & beef ragu",
-//         price: 27.0,
-//       },
-//       {
-//         name: "Rigatoni All'Amatriciana",
-//         description: "Rigatoni with pancetta, chilli & tomato sauce",
-//         price: 27.0,
-//       },
-//       {
-//         name: "Spaghetti Con Gamberi",
-//         description: "Spaghetti with olive oil, garlic, prawn meat and parsley",
-//         price: 35.0,
-//       },
-//       {
-//         name: "Gnocchi Gorgonzola",
-//         description: "Handmade gnocchi, cream, gorgonzola & walnuts",
-//         price: 30.0,
-//       },
-//     ],
-//   },
-//   {
-//     category: "Pizza",
-//     items: [
-//       {
-//         name: "Margherita",
-//         description: "Diced tomatoes & mozzarella, oregano",
-//         price: 15.5,
-//       },
-//       { name: "Pepperoni", description: "Pepperoni & mozzarella", price: 16.5 },
-//       { name: "Hawaiian", description: "Ham & pineapple", price: 16.5 },
-//       {
-//         name: "Capricciosa",
-//         description: "Tomato sauce, shredded ham, mushrooms, olives, cheese",
-//         price: 17.5,
-//       },
-//     ],
-//   },
-//   {
-//     category: "Soft Drinks",
-//     items: [
-//       { name: "Mineral Water", price: 6.5 },
-//       { name: "Coke", price: 5.5 },
-//       { name: "Sprite", price: 5.5 },
-//       { name: "Fanta", price: 5.5 },
-//     ],
-//   },
-//   {
-//     category: "Dessert",
-//     items: [
-//       {
-//         name: "Calzoncino",
-//         description: "Pillowed shaped pizza w/nutella & strawberries",
-//         price: 25.0,
-//       },
-//       {
-//         name: "Tiramisu",
-//         description: "Pick me up Tuscan trifle",
-//         price: 17.0,
-//       },
-//     ],
-//   },
-// ];
-
-// Add to Cart functionality
-
 const addToCartBtn = document.querySelectorAll(".add-item");
 const cartItems = document.querySelector("#cart-content");
 const productNames = document.querySelectorAll(".top-half");
@@ -123,27 +37,21 @@ addToCartBtn.forEach((element, index) => {
   };
 });
 
-// Search bar
-// let search = document.querySelector("[data-search]");
-// // let cartItems = document.querySelectorAll(".product-cart");
-
-// search.addEventListener("input", (e) => {
-//   let name = document.querySelectorAll(".top-half");
-//   const value = e.target.value;
-//   if (value.includes(name.textContent)) {
-//     console.log("yes");
-//   }
-// });
-
 // Login 
-const loginName= document.getElementById('name');
-const password= document.getElementById('password');
-const form = document.getElementById('form');
-const errorElement=document.getElementById('error');
 
+document.addEventListener('DOMContentLoaded', () => {
 
-form.addEventListener('submit', (e)=> {
-  let messages = []
+  const loginName= document.getElementById('name');
+  const password= document.getElementById('password');
+  const form = document.getElementById('form');
+  const errorElement=document.getElementById('error');
+
+ form.addEventListener('submit', (e) => {
+  
+  let messages = [];
+  if (!loginName.value.trim()){
+    messages.push('Name is required')
+  }
   if (loginName.value ==='' || loginName.value== null){
     messages.push('Name is required');
   }
@@ -161,16 +69,45 @@ form.addEventListener('submit', (e)=> {
     errorElement.innerText= messages.join(',')
   } 
 })
-
-const userBtn= document.querySelector('#btn-user');
-const loginForm = document.getElementById('form')
-userBtn.addEventListener('click',openLoginView);
-
+});
 
 function openLoginView(){
-  loginForm.classList.toggle('active')
+  const loginForm = document.getElementById('form');
+  loginForm.classList.toggle('active');
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+  const userBtn= document.querySelector('#btn-user');
+  if (userBtn){
+  userBtn.addEventListener('click',openLoginView);
+  } else {
+    console.log('User button not found');
+  }
+});
+
+// Hamburger Menu
+
+function openHamburgerMenu() {
+  const menuDrop= document.querySelector('section.right-nav > ul')
+  menuDrop.classList.toggle('active')
 }
 
+document.addEventListener('DOMContentLoaded', function(){
+  const hamburgerMenu= document.querySelector('#menu-trigger');
+  if (hamburgerMenu){
+    hamburgerMenu.addEventListener('click',openHamburgerMenu)
+  }
+})
 
 
+// Shopping Cart Icon
 
+function openShopCart(){
+  const shopCart= document.querySelector('.order-list')
+  shopCart.classList.toggle('active')
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+const btnShopCart= document.getElementById('btn-shop-cart')
+btnShopCart.addEventListener('click',openShopCart);
+})

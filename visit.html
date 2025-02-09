@@ -13,9 +13,62 @@
     />
   </head>
   <body id="visit-page">
-    <p>Make a reservation</p>
-    <button>RESERVATION</button>
-    <div>Contact</div>
-    <div>Location</div>
+    <div class="header-visit-page">
+    <img
+    src="./Images/logo.png"
+    alt="Logo of the
+  restaurant"
+    class="logo-order-view"
+  />
+  <h1> Table reservation </h1>
+    </div>
+    <section class="reservation-cart">
+    <div class='card-container'>
+      <div class="card-content">
+        <h2>Reservation</h2>
+        <form>
+          <div class="form-reservation">
+            <select name="days">
+              <option value="day-select">Select Day</option>
+              <option value="monday">Monday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+            <select name="hours">
+              <option value="hour-select">Choose Hour</option>
+              <option value="5">5:00pm</option>
+              <option value="6">6:00pm</option>
+              <option value="7">7:00pm</option>
+              <option value="8">8:00pm</option>
+              <option value="9">9:00pm</option>
+            </select>
+            <div class="form-client-details">
+              <input type="text" placeholder="Full Name">
+              <input type="text" placeholder="Phone Number">
+              <input type="text" placeholder="Email address">
+            </div>
+            <div class="form-booking-details">
+              <select name="guests">
+              <option value="guest-number">Guests</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            </div>
+            <button class="btn-book-table"> Book table</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+    
+  </section>
+  <!-- <footer>
+    CLOCK
+  </footer> -->
   </body>
 </html>
