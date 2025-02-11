@@ -20,38 +20,16 @@
   restaurant"
     class="logo-order-view"
   />
-  <h1> Table reservation </h1>
+  <a href="./index.html">HOME</a>
     </div>
-    <section class="reservation-cart">
-    <div class='card-container'>
-      <div class="card-content">
-        <h2>Reservation</h2>
-        <form>
-          <div class="form-reservation">
-            <select name="days">
-              <option value="day-select">Select Day</option>
-              <option value="monday">Monday</option>
-              <option value="wednesday">Wednesday</option>
-              <option value="thursday">Thursday</option>
-              <option value="friday">Friday</option>
-              <option value="saturday">Saturday</option>
-            </select>
-            <select name="hours">
-              <option value="hour-select">Choose Hour</option>
-              <option value="5">5:00pm</option>
-              <option value="6">6:00pm</option>
-              <option value="7">7:00pm</option>
-              <option value="8">8:00pm</option>
-              <option value="9">9:00pm</option>
-            </select>
-            <div class="form-client-details">
-              <input type="text" placeholder="Full Name">
-              <input type="text" placeholder="Phone Number">
-              <input type="text" placeholder="Email address">
-            </div>
-            <div class="form-booking-details">
-              <select name="guests">
-              <option value="guest-number">Guests</option>
+    <form class="reservation-cart">
+      <div class='card-container'>
+        <div class="card-content">
+          <h2>Reservation</h2>
+          <div class="form-reservation" >
+            <div class="form-guest-details">
+              <select name="guests" required>
+              <option value="" selected disabled hidden>Guests</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -59,16 +37,33 @@
               <option value="5">5</option>
             </select>
             </div>
-            <button class="btn-book-table"> Book table</button>
+            <select name="days" required>
+              <option value="" selected disabled hidden>Select Day</option>
+              <option value="monday">Monday</option>
+              <option value="wednesday">Wednesday</option>
+              <option value="thursday">Thursday</option>
+              <option value="friday">Friday</option>
+              <option value="saturday">Saturday</option>
+            </select>
+            <select name="hours" required>
+              <option value="" selected disabled hidden>Choose Time</option>
+              <option value="5">5:00pm</option>
+              <option value="6">6:00pm</option>
+              <option value="7">7:00pm</option>
+              <option value="8">8:00pm</option>
+              <option value="9">9:00pm</option>
+            </select>
+            <div class="form-client-details">
+              <label for="reservation-name">Full name:</label>
+              <input type="text" placeholder="Full Name"  required id="reservation-name">
+              <label for = "reservation-phone">Enter your Phone Number: <br />
+                <small>Format: 123-456-7890</small></label>
+              <input type="tel" placeholder="Phone Number"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required id="reservation-phone">
+            </div>
+            <button type='submit 'class="btn-book-table"> Book table</button>
           </div>
-        </form>
-
       </div>
     </div>
-    
-  </section>
-  <!-- <footer>
-    CLOCK
-  </footer> -->
+  </form>
   </body>
 </html>

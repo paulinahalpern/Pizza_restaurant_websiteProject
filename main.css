@@ -1,5 +1,6 @@
+/* Index.html - MAIN Page */
+
 * {
-  /* border: 1px red solid; */
   margin: 0;
   box-sizing: border-box;
 }
@@ -29,7 +30,7 @@ html {
   top: 0;
   justify-content: space-between;
   width: 100%;
-  padding: 2rem;
+  padding: 0.5rem;
   z-index: 1000;
 }
 
@@ -45,7 +46,6 @@ html {
 .hamburger {
   display: none;
 }
-
 
 
 @media (max-width: 768px) {
@@ -72,9 +72,7 @@ html {
   }
   section.right-nav > ul.active{
     display: flex;
-   
   }
-  
 }
 
 .right-nav > ul {
@@ -113,7 +111,6 @@ html {
 }
 
 .opening-hours p {
-  font-family: "Caveat", serif;
   font-weight: 600;
   font-size: 35px;
   text-align: center;
@@ -128,12 +125,10 @@ html {
   margin-right: 20vh;
 }
 .opening-hours ul li {
-  font-family: "Caveat", serif;
   list-style-type: none;
   letter-spacing: 1px;
   display: flex;
   justify-content: space-around;
-
   font-weight: 500;
 }
 
@@ -191,14 +186,12 @@ html {
 
 @media (max-width: 768px) {
   .nav-collection {
-    
     gap: 2rem;
   }
 }
 
 .nav-item {
   font-size: 70px;
-  font-family: "Caveat", serif;
 }
 .nav-item a {
   text-decoration: none;
@@ -221,7 +214,7 @@ html {
   transition: background-color 0.5s;
 }
 
-/* ORDER PAGE  need to add mobile version*/
+/* ORDER PAGE  order.html*/
 
 #order-page {
   background-color: #edeade;
@@ -235,8 +228,7 @@ html {
   width: 100%;
   height: 10vh;
   background: rgba(0, 0, 0);
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   position: sticky;
   z-index: 2222;
   top: 0;
@@ -293,32 +285,6 @@ html {
 }
 
 
-
-.search-product {
-  display: flex;
-  width: 50vh;
-  max-width: 100%;
-  gap: 4vh;
-  position: relative;
-}
-
-.search-product input {
-  width: 50vh;
-  width: 100%;
-  height: 4vh;
-  border-radius: 15px;
-  max-width: 100%;
-}
-
-.search-product button {
-  background: gold;
-  border-radius: 50%;
-  height: 100%;
-  aspect-ratio: 1;
-  position: absolute;
-  right: 0;
-}
-
 @media (max-width: 768px) {
    .nav-bar-order {
     display: flex;
@@ -336,7 +302,6 @@ html {
 
 .pizzeria-address div {
   font-size: 5vh;
-  font-family: "Caveat", serif;
   position: absolute;
   top: 25%;
   right: 2%;
@@ -370,12 +335,12 @@ html {
 
 .aside-menu button {
   border-radius: 50px;
-  font-family: "Caveat", serif;
   width: 20vh;
   height: 10vh;
   font-size: 3vh;
   background-color: #f5f0e1;
   margin-left: 3vh;
+  font-family: "Caveat", serif;
 }
 
 .aside-menu button:hover {
@@ -395,7 +360,8 @@ html {
 }
 .order-list {
   color: white;
-  width: 50%;
+  font-size: 2rem;
+ 
 }
 
 .grid-layout {
@@ -406,7 +372,7 @@ html {
   color: white;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
   .grid-layout {
     display: grid;
     grid-template-columns: auto;
@@ -416,7 +382,6 @@ html {
 .product-class-title,
 .shopping-list {
   width: 100%;
-  font-family: "Caveat", serif;
   font-size: 8vh;
   color: black;
   margin-top: 2vh;
@@ -444,31 +409,37 @@ html {
 .btn-restart {
   margin: 2vh;
   border: hidden;
-  font-family: "Caveat", serif;
   font-size: 3vh;
   cursor: pointer;
+  font-family: "Caveat", serif;
 }
 
 .shopping-cart-container li {
   text-align: left;
-  font-family: "Caveat", serif;
   margin: 2vh;
   color: black;
   background-color: #f0e68c;
   display: flex;
 }
 
+@media (max-width: 768px) {
+  .shopping-cart-container li {
+    font-size:1rem;
+    width:fit-content;
+  }
+}
+
 .cart-price {
-  text-align: right;
+  text-align: left;
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 2vh;
 }
 
 .summary {
-  text-align: center;
-  color: black;
-  font-family: "Caveat", serif;
+  text-align: left;
+  color: white;
+
   font-size: 5vh;
 }
 
@@ -478,8 +449,7 @@ html {
 
 #restaurant-details,
 .add-products {
-  font-size: 3vh;
-  font-family: "Caveat", serif;
+  font-size: 3rem;
   text-align: center;
   font-weight: 500;
   color: white;
@@ -492,7 +462,6 @@ html {
   box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
   color: black;
   border-radius: 50px;
-  font-family: "Caveat", serif;
   font-size: 3vh;
   font-weight: 600;
   text-align: center;
@@ -522,7 +491,6 @@ html {
   border-radius: 20px;
   min-height: 30px;
   min-width: 120px;
-  font-family: "Caveat", serif;
   font-weight: 700;
   font-size: 2vh;
   letter-spacing: 3px;
@@ -534,34 +502,20 @@ html {
   transition: background-color 0.5s;
 }
 
-@media (max-width: 768px) {
-  .product-cart {
-    font-size: 3vh;
-    font-weight: 500;
-  }
-  .top-half {
-    font-size: 3vh;
-  }
-  .bottom-half {
-    font-size: 2vh;
-  }
-}
-
 .add-products {
-  margin: 10vh;
+  margin: 5vh;
+  font-size: 1.5rem;
 }
 
 #btn-shop-cart{
   display: none;
 }
 
-
 .nav-bar-right{
   display: flex;
   justify-content: space-between;
 }
 
-/* Shopping cart mobile */
 @media (max-width: 768px){
   .shopping-list{
     display: none;
@@ -589,13 +543,34 @@ html {
   .summary{
     text-align: center;
     color:white;
+    font-size:1.5rem;
   }
   .order-list.active{
     display:flex;
   }
 }
 
-/* LOGIN */
+@media (max-width: 768px) {
+  .product-cart {
+    font-size: 3vh;
+    font-weight: 500;
+  }
+  .top-half {
+    font-size: 3vh;
+  }
+  .bottom-half {
+    font-size: 2vh;
+  }
+  #restaurant-details,
+  .add-products {
+    font-size:1.5rem;
+  }
+  .item-count{
+    color:white;
+  }
+}
+
+/* LOGIN in order.html*/
 
 #form{
   top:70%;
@@ -612,7 +587,7 @@ html {
 
 #form.active{
   border: 3px solid #f1f1f1;
-  height: 30vh;
+  height: 40vh;
   margin:1vh;
 
 }
@@ -660,6 +635,7 @@ button[type='submit'] {
   width: 100%;
   font-size: 1rem;
   background-color: rgb(245, 245, 228);
+  font-family: "Caveat", serif;
 
 }
 
@@ -670,15 +646,13 @@ button[type="submit"]:hover {
 
 
 #error{
-  color:black;
+  color:red;
   font-size: 1rem;
 }
 
 
 
-
-/* EAT html */
-/* make scroll-based animations */
+/* EAT.html */
 
 #eat-page , #drink-page {
   background-image: url("Images/delicious-pizza-traditional-italian-pizza.jpg");
@@ -718,10 +692,9 @@ h1 {
   gap:5px;
   color: white;
   font-size: 3vh;
-  font-family: "Caveat", serif;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .grid-layout-menu {
     display: grid;
     grid-template-columns: 1fr;
@@ -735,7 +708,6 @@ h1 {
   box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
   color: black;
   border-radius: 30px;
-  font-family: "Caveat", serif;
   font-size: 25px;
   font-weight: 600;
   text-align: center;
@@ -752,8 +724,7 @@ h1 {
   left: 0;
 }
 
-/* DRINK MENU */
-
+/* DRINK.html*/
 
 .drink-menu {
   display: grid;
@@ -761,7 +732,6 @@ h1 {
   text-align: center;
   color: white;
   max-width: 120vh;
-  font-family: "Caveat", serif;
   padding: 7vh;
   gap: 5vh;
   font-size: 3vh;
@@ -771,7 +741,6 @@ h1 {
   background-position: center;
   box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  background-color: #fdfdf8;
   color: black;
 }
 
@@ -797,12 +766,11 @@ h1 {
   padding-left: 0;
 }
 
-
-/* VISIT PAGE */
+/* Visit.html */
 
 #visit-page{
   font-family: "Caveat", serif;
-  background-image: url(Images/delicious-pizza-wooden-cutting-board-pepper-ketchup-right-side-isolated-dark-surface.jpg);
+  background-image: url(Images/delicious-homemade-pizza-wooden-board-tomatoes-oil-bottle-pepper-ketchup-right-side-dark-surface.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -811,26 +779,26 @@ h1 {
 .header-visit-page{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+}
+
+.header-visit-page a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color:white;
 }
 
 .reservation-cart{
   position: absolute;
-  top:20%;
+  bottom:15%;
   right:5%;
-  background-color: #f5f0e1;
   box-shadow: 0 15px 60px 0 rgba(0, 0, 0, 0.5);
   border-radius: 10%;
-  background-color: #fdfdf8;
   color: black;
   height: fit-content;
-  width:max-content;
-  padding:30px;
 }
 
 @media (max-width: 768px) {
   .reservation-cart {
-    width:100vw;
     margin: auto;
     top:10%;
     width:100%;
@@ -841,14 +809,12 @@ h1 {
     padding:0;
     letter-spacing: 0;
 }
-.header-visit-page{
-  justify-content: space-around;
-}
 }
 
 .card-content h2{
-  font-size: 3rem;
+  font-size: 5rem;
   display: flex;
+  color:white;
   justify-content: center;
   padding: 5%; 
 }
@@ -860,7 +826,61 @@ h1 {
   margin:auto;
   font-size: 2rem;
   align-items: center;
+  background-color: #edeade;
+  border: none;
+  padding: 2vh 6vh;
+  text-align: center;
+  text-decoration: none;
+  transition-duration: 0.4s;
+  cursor:pointer;
+  width: fit-content;
+  font-family: "Caveat", serif;
+}
+
+.btn-book-table:hover {
+  background-color: #c2c1bc; 
+}
+
+.form-client-details{
+  margin: 2vh;
+  display:grid;
+}
+
+.form-client-details input[type=text], input[type='tel']  {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
 }
 
 
+.form-client-details label{
+font-size:1.5rem;
+color:black;
+background-color: #edeade;
 
+}
+
+.form-client-details input[type=text], input [type='tel']:focus {
+  border: 3px solid #555;
+} 
+
+
+
+.form-reservation select {
+  width: 50%;
+  padding: 2vh 5vh;
+  margin:1vh;
+  border: 1px solid rgb(90, 99, 90);;
+  border-radius: 4px;
+  background-color: #edeade;
+}
+
+@media (max-width: 768px) {
+  .form-reservation select{
+    width:fit-content
+
+  }
+}
