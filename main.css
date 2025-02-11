@@ -565,6 +565,9 @@ font-weight: 500;
   display: flex;
   justify-content: space-between;
 }
+.login-page{
+  
+}
 
 
 @media (max-width: 768px) {
@@ -614,13 +617,15 @@ font-weight: 500;
   #btn-shop-cart{
     display: flex;
     width:8vh;
-    height:5vh;
+    height:6vh;
     justify-content: center;
     align-items: center; 
     border-radius: 10px;
     cursor:pointer;
     right:0;
-    
+  }
+  #btn-user{
+    height:6vh;
   }
   #shop-cart-icon{
     width:3vh;
