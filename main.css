@@ -549,6 +549,9 @@ html {
     display:flex;
   }
 }
+.item-count{
+  display: none;
+}
 
 @media (max-width: 768px) {
   .product-cart {
