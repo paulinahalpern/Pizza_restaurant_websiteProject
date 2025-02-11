@@ -88,7 +88,7 @@ function openLoginView(){
 document.addEventListener('DOMContentLoaded', () => {
   const userBtn= document.querySelector('#btn-user');
   if (userBtn){
-  userBtn.addEventListener('mouseover',openLoginView);
+  userBtn.addEventListener('click',openLoginView);
   } else {
     console.log('User button not found');
   }
