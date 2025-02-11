@@ -4,7 +4,7 @@ const productNames = document.querySelectorAll(".top-half");
 const productPrices = document.querySelectorAll(".bottom-half");
 const restartBtn = document.querySelector(".btn-restart");
 const sumValue = document.getElementById("summary-value");
-const itemCountDisplay=document.querySelector('.item-count')
+const itemCountDisplay=document.querySelector('#item-count')
 
 let priceTotal = 0;
 let itemCount=0;
@@ -23,8 +23,6 @@ addToCartBtn.forEach((element, index) => {
     let itemName = productNames[index].textContent;
     let itemPrice = parseFloat(productPrices[index].textContent.replace(/[^0-9.]/g, "")); 
     // This finds the first number, and replaces the entire string with the matched number.
-
-
 
     cartItem.textContent = itemName;
     cartPrice.textContent = `$${itemPrice.toFixed(2)}`;
@@ -45,6 +43,7 @@ addToCartBtn.forEach((element, index) => {
     priceTotal = 0;
     itemCount= 0;
     sumValue.textContent = "$0.00";
+    itemCountDisplay.textContent = `Items: ${itemCount}`;
   };
   
 });

@@ -263,6 +263,7 @@ html {
 #btn-user {
   border-radius: 10px;
   margin-right: 2vh;
+  cursor:pointer;
 }
 
 .logo-order-view {
@@ -406,12 +407,18 @@ html {
   margin-bottom: 2vh;
 }
 
-.btn-restart {
+.btn-restart, .btn-order {
   margin: 2vh;
   border: hidden;
   font-size: 3vh;
   cursor: pointer;
   font-family: "Caveat", serif;
+  background-color:#f0e68c;
+  font-size:1.5rem;
+}
+
+.btn-restart:hover, .btn-order:hover{
+  font-size: 1.8rem;
 }
 
 .shopping-cart-container li {
@@ -439,8 +446,8 @@ html {
 .summary {
   text-align: left;
   color: white;
-
-  font-size: 5vh;
+font-weight: 500;
+  font-size: 2rem;
 }
 
 .summary span {
@@ -523,7 +530,6 @@ html {
   .order-list{
     position: absolute;
     top:10%;
-    left:30%;
     display: none;
   }
   .cart-price{
@@ -543,15 +549,23 @@ html {
   .summary{
     text-align: center;
     color:white;
-    font-size:1.5rem;
+    font-size:2rem;
+    font-weight: 500;
   }
   .order-list.active{
-    display:flex;
+    display:block;
+  }
+  div .shopping-cart-container{
+    height:80vh;
+    width:100%;
   }
 }
-.item-count{
-  display: none;
+
+.shop-cart-btn{
+  display: flex;
+  justify-content: space-between;
 }
+
 
 @media (max-width: 768px) {
   .product-cart {
@@ -568,8 +582,9 @@ html {
   .add-products {
     font-size:1.5rem;
   }
-  .item-count{
+  #item-count{
     color:white;
+    font-weight: 500;
   }
 }
 
@@ -598,12 +613,13 @@ html {
 @media (max-width: 768px) {
   #btn-shop-cart{
     display: flex;
-    width:5vh;
+    width:8vh;
     height:5vh;
     justify-content: center;
     align-items: center; 
-    margin: 4vh;
     border-radius: 10px;
+    cursor:pointer;
+    right:0;
     
   }
   #shop-cart-icon{
@@ -611,11 +627,13 @@ html {
     height:3vh;
     padding: 0; 
   }
+  .login-page{
+    display:flex;
+    justify-content: space-around;
+  }
 }
 
-#btn-user{
-  cursor: pointer;
-}
+ 
 
 
 input[type=text], input[type=password] {

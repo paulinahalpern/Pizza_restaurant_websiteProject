@@ -23,11 +23,6 @@
         class="logo-order-view"
       />
       <a href="./index.html">HOME</a>
-      <button id="btn-shop-cart">
-        <img src="Images/shopping-cart.png" alt="shopping cart icon" id="shop-cart-icon"/>
-    </button>
-    <p class="item-count"></p>
-
     </div>
     
     <div class="login-page">
@@ -43,11 +38,15 @@
             <button type="submit">Submit</button>
             <div id="error"></div>
             </form>
-                
+            <div>
             <button id="btn-user">
                 <img src="Images/user.png" alt="user icon" class="user-icon" />
               </button>   
         </div>
+        <button id="btn-shop-cart">
+            <img src="Images/shopping-cart.png" alt="shopping cart icon" id="shop-cart-icon"/>
+        </button>
+        \</div>
     </header>
     <div class="pizzeria-address">
       <div> Fiery Pizzeria 804/222 Bay Road, <br>Sandringham </div>
@@ -139,7 +138,10 @@
         <div class="shopping-list">Shopping Cart</div>
         
         <div class="shopping-cart-container">
+            <div class="shop-cart-btn">
         <button class="btn-restart">Restart</button>
+        <button class="btn-order">Order</button>
+    </div>
         <div id="restaurant-details">
         <p>Ordering From </p>
         <p>Fiery Pizza</p>
@@ -150,13 +152,10 @@
             
 
         </div>
-        <div class="summary">Summary:<span id="summary-value">$0</span></div>
-        
+        <p id="item-count"></p>
+        <div class="summary">Summary:<span id="summary-value">$0</span></div>   
         </div>
-        
-        
     </div>
-    
 </div
   </body>
   <script  src="index.js"></script>
