@@ -565,10 +565,6 @@ font-weight: 500;
   display: flex;
   justify-content: space-between;
 }
-.login-page{
-  
-}
-
 
 @media (max-width: 768px) {
   .product-cart {
